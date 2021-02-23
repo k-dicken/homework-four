@@ -13,11 +13,13 @@ footer {
 
     .footer-content {
         width: 979px;
-        height: 42px;
+        min-height: 42px;
 
         display: flex;
         justify-content: space-between;
         align-items: center; 
+
+        flex-wrap: wrap;
 
         img {
             height: 42px;
@@ -59,4 +61,20 @@ footer {
     .footer-content {
         width: 80%;
     }
+}
+
+@media only screen and (max-width: 420px) {
+    footer {
+        height: 200px;
+
+
+        .footer-content {
+            flex-direction: column;
+
+            img {
+                margin: 15px 0 15px 0;
+            }
+        }
+    }
+
 }
