@@ -29,7 +29,7 @@ p {
 }
 .hero {
   height: 500px;
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -74,11 +74,18 @@ p {
   color: white;
 }
 
+@media only screen and (max-width: 1060px) {
+  .hero .hero-content {
+    width: 70%;
+    height: 300px;
+  }
+}
 nav {
   width: 980px;
   height: 60px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: white solid 2px;
 }
@@ -88,23 +95,49 @@ nav .logo {
 }
 nav .links {
   width: 530px;
-  height: 42px;
+  min-height: 25px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  align-self: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 nav .links a {
   text-decoration: none;
   font-family: Gill;
   color: white;
+  margin: auto;
+}
+nav .links p {
+  color: #79ADDC;
+  margin: 0 5px 0 5px;
 }
 
+@media only screen and (max-width: 1060px) {
+  nav {
+    width: 90%;
+    min-height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  nav .links {
+    width: 100%;
+    padding: 0 5% 0 5%;
+  }
+}
+@media only screen and (max-width: 418px) {
+  nav {
+    min-height: 100px;
+  }
+}
 .promo-tours {
-  width: 1280px;
-  height: 304px;
+  max-width: 1280px;
+  min-height: 304px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-left: 160px;
   padding-right: 160px;
@@ -113,6 +146,7 @@ nav .links a {
   height: 304px;
   width: 236px;
   margin-top: -50px;
+  margin-bottom: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,6 +187,14 @@ nav .links a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/tour-03.jpg);
 }
 
+@media only screen and (max-width: 1060px) {
+  .promo-tours {
+    width: 236px;
+    display: block;
+    justify-content: center;
+    padding: 0;
+  }
+}
 .booking-form {
   width: 818px;
   height: 890px;
@@ -190,16 +232,19 @@ nav .links a {
   margin-bottom: 20px;
 }
 .booking-form form .text-short {
-  width: 344px;
+  width: 44%;
 }
 .booking-form form .text-long {
-  width: 453px;
+  width: 54%;
 }
-.booking-form form .check {
-  width: 698px;
+.booking-form form .check-input {
+  width: 85%;
+}
+.booking-form form .check label {
+  width: 10%;
 }
 .booking-form form .drop-down {
-  width: 103px;
+  width: 15%;
   height: 60px;
   margin-bottom: 20px;
   padding-left: 10px;
@@ -209,7 +254,7 @@ nav .links a {
   font-size: 18px;
 }
 .booking-form form .message {
-  width: 818px;
+  width: 100%;
   height: 192px;
   padding: 10px 10px 10px 10px;
   border: #79ADDC solid 2px;
@@ -218,17 +263,56 @@ nav .links a {
   font-size: 18px;
 }
 .booking-form form .submit {
-  width: 813px;
+  width: 98%;
   margin: 20px auto;
   border-radius: 50px;
   color: white;
   background-color: #79ADDC;
 }
 
+@media only screen and (max-width: 1060px) {
+  .booking-form {
+    width: 80%;
+    height: 1050px;
+  }
+  .booking-form form .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .booking-form form .text-short {
+    width: 100%;
+  }
+  .booking-form form .text-long {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .booking-form {
+    height: 1400px;
+  }
+  .booking-form form .row {
+    flex-direction: column;
+  }
+  .booking-form form .check label {
+    width: 100%;
+  }
+  .booking-form form .check-input {
+    width: 100%;
+  }
+  .booking-form form .drop-down {
+    width: 100%;
+  }
+  .booking-form form label {
+    width: 100%;
+  }
+}
 footer {
-  width: 1280px;
+  width: 100%;
   height: 100px;
   margin: 0 auto;
+  padding: 0 20px 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,7 +322,7 @@ footer .footer-content {
   width: 979px;
   height: 42px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 footer .footer-content img {
@@ -249,16 +333,24 @@ footer .footer-content p {
   font-family: Gill;
   font-size: 12px;
   color: white;
+  text-align: center;
   margin: 0 auto;
+  width: 30%;
 }
 footer .footer-content .socials {
   width: 112px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
 }
 footer .footer-content .socials img {
   height: 22px;
   width: 22px;
+}
+
+@media only screen and (max-width: 1060px) {
+  .footer-content {
+    width: 80%;
+  }
 }

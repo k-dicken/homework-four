@@ -1,6 +1,8 @@
 .hero {
     height: 500px;
-    width: 1280px;
+    // width: 1280px;
+    // max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
 
     display: flex;
@@ -56,6 +58,18 @@
             color: $site-white;
 
         }
+    }
+
+}
+
+@media only screen and (max-width: 1060px) {
+    .hero {
+        .hero-content {
+            width: 70%;
+            height: 300px;
+
+        }
+        
     }
 
 }
