@@ -24,8 +24,6 @@ nav {
         justify-content: space-between;
 
         flex-wrap: wrap;
- 
-        margin-bottom: 5px;
 
         a {
             text-decoration: none;
@@ -62,6 +60,8 @@ nav {
         .links {
             width: 100%;
             padding: 0 5% 0 5%;
+             
+            margin-bottom: 5px;
         }
     }
 }
